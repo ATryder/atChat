@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="326.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atChat.ChatConnectTo">
+  <children>
+    <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <children>
+        <HBox alignment="TOP_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+          <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="336.0" prefWidth="318.0" spacing="10.0" HBox.hgrow="ALWAYS">
+              <children>
+                <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="103.0" prefWidth="285.0" spacing="3.0" VBox.vgrow="ALWAYS">
+                  <children>
+                    <Label text="Remote" />
+                    <GridPane styleClass="greyOutline" VBox.vgrow="ALWAYS">
+                      <children>
+                        <Label text="Port" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                          <font>
+                            <Font size="14.0" fx:id="x1" />
+                          </font>
+                        </Label>
+                        <Label font="$x1" text="IP Address" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField id="localChatPort" fx:id="remoteChatPort" onKeyReleased="#keyPress" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField id="localFilePort" fx:id="remoteIPAddress" onKeyReleased="#keyPress" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="141.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="185.0" minWidth="10.0" prefWidth="165.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </VBox>
+                <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="73.0" prefWidth="306.0" spacing="3.0" VBox.vgrow="ALWAYS">
+                  <children>
+                    <Label text="Local" />
+                    <GridPane styleClass="greyOutline" VBox.vgrow="ALWAYS">
+                      <children>
+                        <Label font="$x1" text="Handle" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField id="localChatPort" fx:id="clientHandle" onKeyReleased="#keyPress" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="141.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="185.0" minWidth="10.0" prefWidth="165.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </VBox>
+                <HBox fx:id="passwordHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                  <children>
+                    <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="109.0" text="Password" HBox.hgrow="NEVER" />
+                    <TextField fx:id="passwordField" maxWidth="-Infinity" minWidth="-Infinity" onKeyReleased="#keyPress" prefHeight="30.0" prefWidth="186.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                  <children>
+                    <Label maxWidth="-Infinity" minWidth="-Infinity" prefWidth="109.0" text="Hide Password" HBox.hgrow="NEVER" />
+                    <CheckBox fx:id="showPassword" mnemonicParsing="false" onAction="#showPassTogg" text="" />
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="44.0" prefWidth="306.0" spacing="12.0" VBox.vgrow="NEVER">
+          <children>
+            <Button fx:id="mAcceptButton" mnemonicParsing="false" onAction="#saveButton" text="Okay" HBox.hgrow="NEVER">
+              <font>
+                <Font size="18.0" fx:id="x2" />
+              </font>
+            </Button>
+            <Button fx:id="mDeclineButton" font="$x2" mnemonicParsing="false" onAction="#cancelButton" text="Cancel" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@atChatTheme.css" />
+  </stylesheets>
+</AnchorPane>

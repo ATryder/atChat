@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="426.0" prefWidth="387.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atChat.AcceptFileTransfer">
+  <children>
+    <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <children>
+        <VBox id="VBox" alignment="TOP_CENTER" prefHeight="336.0" prefWidth="334.0" spacing="7.0" VBox.vgrow="ALWAYS">
+          <children>
+            <Label fx:id="mLabel" text="Do you wish to accept a file transfer from " textAlignment="CENTER" underline="false" wrapText="true" VBox.vgrow="NEVER">
+              <font>
+                <Font size="12.0" />
+              </font>
+            </Label>
+            <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="18.0" prefWidth="-1.0" spacing="15.0" VBox.vgrow="NEVER">
+              <children>
+                <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="NEVER">
+                  <children>
+                    <ImageView id="downloadImageView" fx:id="checkedImageView" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+                    <Label text="Download" />
+                  </children>
+                </HBox>
+                <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="NEVER">
+                  <children>
+                    <ImageView fx:id="unCheckedImageView" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+                    <Label text="Don't Download" />
+                  </children>
+                </HBox>
+                <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="NEVER">
+                  <children>
+                    <ImageView fx:id="overwriteImageView" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+                    <Label text="Overwrite" />
+                  </children>
+                </HBox>
+              </children>
+            </HBox>
+            <CheckBox fx:id="mSelectAll" mnemonicParsing="false" onAction="#selectAllClick" text="Select All" VBox.vgrow="NEVER" />
+            <ListView fx:id="mListView" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" styleClass="list-view-files" VBox.vgrow="ALWAYS" />
+          </children>
+        </VBox>
+        <HBox alignment="CENTER_LEFT" prefHeight="-1.0" prefWidth="-1.0" spacing="7.0" VBox.vgrow="NEVER">
+          <children>
+            <Label id="saveInLabel" minWidth="56.0" text="Save in:" HBox.hgrow="NEVER" />
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" styleClass="greyOutline" HBox.hgrow="ALWAYS">
+              <children>
+                <ImageView fx:id="folderImageView" fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="saveInLabel" text="Directory" textOverrun="LEADING_ELLIPSIS" HBox.hgrow="NEVER" />
+              </children>
+              <padding>
+                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+              </padding>
+            </HBox>
+            <HBox id="HBox" alignment="CENTER_RIGHT" fillHeight="true" spacing="0.0" HBox.hgrow="NEVER">
+              <children>
+                <Button id="destinationClick" minWidth="92.0" mnemonicParsing="false" onAction="#saveInClick" text="Browse" HBox.hgrow="NEVER" />
+              </children>
+            </HBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="44.0" prefWidth="367.0" spacing="12.0" VBox.vgrow="NEVER">
+          <children>
+            <Button fx:id="mAcceptButton" mnemonicParsing="false" onAction="#acceptClick" text="Accept" HBox.hgrow="NEVER">
+              <font>
+                <Font size="18.0" fx:id="x2" />
+              </font>
+            </Button>
+            <Button fx:id="mDeclineButton" font="$x2" mnemonicParsing="false" onAction="#declineClick" text="Decline" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@atChatTheme.css" />
+  </stylesheets>
+</AnchorPane>

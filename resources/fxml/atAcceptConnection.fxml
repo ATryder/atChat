@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="238.0" prefWidth="402.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atChat.AcceptConnectionWindow">
+  <children>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="69.0" prefWidth="382.0" VBox.vgrow="ALWAYS">
+          <content>
+            <HBox id="HBox" fx:id="hBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Label fx:id="acceptLabel" text="Do you wish to accept the following incomming connection?" textAlignment="CENTER" wrapText="true" />
+              </children>
+            </HBox>
+          </content>
+          <VBox.margin>
+            <Insets bottom="10.0" fx:id="x1" />
+          </VBox.margin>
+        </ScrollPane>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="128.0" VBox.margin="$x1" VBox.vgrow="NEVER">
+          <children>
+            <RadioButton fx:id="acceptRadio" mnemonicParsing="false" onAction="#acceptClick" selected="true" text="Accept" HBox.hgrow="NEVER">
+              <toggleGroup>
+                <ToggleGroup fx:id="acceptGroup" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="declineRadio" mnemonicParsing="false" onAction="#declineClick" text="Decline" toggleGroup="$acceptGroup" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+        <Label text="Reason for decline:" VBox.vgrow="NEVER" />
+        <TextField fx:id="declineReason" disable="true" prefWidth="-1.0" VBox.vgrow="NEVER">
+          <VBox.margin>
+            <Insets bottom="15.0" />
+          </VBox.margin>
+        </TextField>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="24.0" VBox.vgrow="NEVER">
+          <children>
+            <Button mnemonicParsing="false" onAction="#dismissWindow" text="Okay" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@atChatTheme.css" />
+  </stylesheets>
+</AnchorPane>

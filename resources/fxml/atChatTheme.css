@@ -1,0 +1,671 @@
+.root {
+	-fx-text-color: rgb(93%, 93%, 93%);
+	-fx-disabled-opacity: 0.4;
+	
+	-fx-blue-gradient: linear-gradient(from 0% 0% to 0% 100%, rgb(32, 186, 255), rgb(32, 186, 255) 41%, rgb(14, 86, 124) 49%, rgb(14, 86, 124) 75%, rgb(21, 126, 181));
+	-fx-orange-gradient: linear-gradient(from 0% 0% to 0% 100%, rgb(255, 198, 0), rgb(255, 198, 0) 41%, rgb(126, 101, 16) 49%, rgb(126, 101, 16) 75%, rgb(255, 198, 0));
+	-fx-black-gradient: linear-gradient(from 0% 0% to 0% 100%, rgb(17%, 17%, 17%), rgb(17%, 17%, 17%) 41%, rgb(0%, 0%, 0%) 49%, rgb(0%, 0%, 0%) 75%, rgb(17%, 17%, 17%));
+	-fx-grey-gradient: linear-gradient(from 0% 0% to 0% 100%, rgb(97%, 97%, 97%), rgb(97%, 97%, 97%) 41%, rgb(77%, 77%, 77%) 49%, rgb(77%, 77%, 77%) 75%, rgb(97%, 97%, 97%));
+	-fx-radial: radial-gradient(center 0% 0%, radius 200%, rgb(56, 56, 56), rgb(7, 7, 7));
+	
+	-fx-background-color: -fx-radial;
+	-fx-font-size: 12px;
+	-fx-font-family: "Arial";
+	-fx-text-fill: -fx-text-color;
+	-fx-font-size: 12px;
+}
+
+.text {
+	-fx-font-smoothing-type: lcd;
+}
+
+.root.popup {
+	-fx-background-color: transparent;
+}
+
+.split-pane {
+	-fx-background-color: transparent;
+	-fx-padding: 0;
+     -fx-font-size: 12px;
+}
+
+.split-pane *.split-pane-divider {
+	-fx-background-color: white;
+	-fx-padding: 0;
+}
+
+.split-pane *.horizontal-grabber {
+	-fx-background-color: transparent;
+}
+
+.split-pane *.vertical-grabber {
+	-fx-background-color: transparent;
+}
+
+.scroll-pane {
+	-fx-background-color: rgba(247, 247, 247, 0.1);
+	-fx-background-radius: 5;
+	-fx-border-color: grey;
+	-fx-border-style: solid;
+	-fx-border-radius: 5;
+	-fx-border-width: 1;
+	-fx-background-insets: 1;
+}
+
+.scroll-pane > .viewport {
+	-fx-background-color: transparent;
+}
+
+.HelpScroll-pane {
+	-fx-background-color: transparent;
+	-fx-background-radius: 0;
+	-fx-border-color: transparent;
+	-fx-border-style: none;
+	-fx-border-radius: 0;
+	-fx-border-width: 0;
+	-fx-background-insets: 0;
+}
+
+.HelpScroll-pane > .viewport {
+	-fx-background-color: transparent;
+}
+
+.chatScroll-pane {
+	-fx-background-radius: 5;
+	-fx-border-style: solid;
+	-fx-border-color: grey;
+	-fx-border-radius: 5;
+	-fx-background-color: radial-gradient(center 0% 0%, radius 200%, rgb(255, 255, 255, .2), rgb(240, 240, 240, .1));
+     -fx-font-size: 12px;
+	-fx-border-width: 1;
+	-fx-background-insets: 1;
+}
+
+.chatScroll-pane > .viewport {
+	-fx-background-color: transparent;
+}
+
+.scroll-bar {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+	-fx-background-color: transparent;
+	-fx-background-radius: 0px;
+	-fx-padding: 0px;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+	-fx-shape: " ";
+	-fx-background-color: transparent;
+	-fx-padding: 0 9 0 0;
+}
+
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:horizontal .decrement-arrow {
+	-fx-shape: " ";
+	-fx-background-color: transparent;
+	-fx-padding: 9 0 0 0;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .track-background {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(93%, 93%, 93%), rgb(86%, 86%, 86%));
+	-fx-background-insets: 0 4 0 4;
+}
+
+.scroll-bar:horizontal .track-background {
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgb(93%, 93%, 93%), rgb(86%, 86%, 86%));
+	-fx-background-insets: 4 0 4 0;
+}
+
+.scroll-bar:vertical .thumb {
+	/*-fx-background-color: rgb(32, 186, 255);*/
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgb(32, 186, 255), rgb(32, 186, 255) 20%, rgb(14, 86, 124) 45%, rgb(14, 86, 124) 56%, rgb(32, 186, 255));
+	-fx-background-insets: 0px;
+	-fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical .thumb:hover, .scroll-bar:vertical .thumb:focused {
+	-fx-background-color: linear-gradient(from 0% 0% to 100% 0%, rgb(255, 205, 32), rgb(255, 205, 32) 20%, rgb(124, 100, 16) 45%, rgb(124, 100, 16) 56%, rgb(255, 205, 32));
+}
+
+.scroll-bar:horizontal .thumb {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(32, 186, 255), rgb(32, 186, 255) 20%, rgb(14, 86, 124) 45%, rgb(14, 86, 124) 56%, rgb(32, 186, 255));
+	-fx-background-insets: 0px;
+	-fx-background-radius: 4px;
+	/*-fx-shape: "M5 0 L0 5 L25 5 L20 0 z M5 13 L0 8 L25 8 L20 13 z";*/
+}
+
+.scroll-bar:horizontal .thumb:hover, .scroll-bar:horizontal .thumb:focused {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(255, 205, 32), rgb(255, 205, 32) 20%, rgb(124, 100, 16) 45%, rgb(124, 100, 16) 56%, rgb(255, 205, 32));
+}
+
+.greyOutline {
+	-fx-border-width: 1;
+	-fx-border-radius: 5;
+	-fx-border-color: grey;
+	-fx-background-radius: 5;
+	-fx-background-color: rgba(247, 247, 247, 0.1);
+	-fx-background-insets: 1;
+}
+
+.label {
+	-fx-font-family: "Arial";
+	-fx-text-fill: -fx-text-color;
+	-fx-font-size: 12px;
+}
+
+.button {
+	-fx-font-family: "Arial";
+	-fx-background-color: -fx-black-gradient;
+	-fx-background-radius: 4;
+	-fx-background-insets: 0;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+	-fx-text-fill: -fx-text-color;
+	-fx-font-size: 14px;
+	-fx-padding: 3 11 3 11;
+}
+
+.button:hover {
+    -fx-effect: dropshadow( three-pass-box , rgb(32, 186, 255) , 10, 0.0 , 0 , 1 );
+}
+
+.button:focused {
+    -fx-effect: dropshadow( three-pass-box , rgb(32, 186, 255) , 10, 0.0 , 0 , 1 );
+}
+
+.button:pressed {
+    -fx-effect: innershadow( three-pass-box , rgb(200, 200, 255) , 5, 0.0 , 0 , 1 );
+}
+
+.button:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.button-media {
+	-fx-font-family: "Arial";
+    -fx-background-color: -fx-black-gradient;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+    -fx-padding: 3 11 3 11;
+}
+
+.button-media:hover {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+}
+
+.button-media:focused {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+}
+
+.button-media:pressed {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.55) , 5, 0.0 , 0 , 1 );
+}
+
+.text-field {
+	-fx-text-fill: -fx-text-color;
+	-fx-background-color: radial-gradient(center 0% 0%, radius 100%, rgb(56, 56, 56), rgb(16, 16, 16));
+	-fx-background-radius: 3;
+	-fx-font-size: 14px;
+	-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.3) , 0, 1.0, 4, 5);
+}
+
+.text-field:focused {
+	-fx-border-style: solid;
+	-fx-border-color: rgb(32, 186, 255);
+	-fx-border-radius: 3;
+	-fx-border-width: 1;
+	-fx-background-insets: 1;
+}
+
+.text-field:disabled {
+	-fx-background-color: rgb(16, 16, 16);
+	-fx-opacity: 1;
+}
+
+.text-area > .scroll-pane {
+	-fx-background-color: transparent;
+	-fx-background-radius: 5;
+	-fx-border-color: transparent;
+	-fx-border-style: none;
+	-fx-border-radius: 5;
+	-fx-border-width: 0;
+	-fx-background-insets: 0;
+}
+
+.text-area > .scroll-pane  .content{
+	-fx-background-color: transparent;
+}
+
+.text-area {
+	-fx-background-radius: 5;
+	-fx-padding: 0;
+	-fx-background-color: radial-gradient(center 0% 0%, radius 100%, rgb(56, 56, 56), rgb(16, 16, 16));
+	-fx-font-size: 14px;
+	-fx-text-fill: rgb(124, 213, 255);
+	-fx-border-width: 1;
+	-fx-border-radius: 5;
+	-fx-border-color: grey;
+	-fx-border-style: solid;
+	-fx-background-insets: 1;
+}
+
+.text-area .content {
+	-fx-background-color: transparent;
+	-fx-padding: 0;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0;
+}
+
+.text-area:focused .content {
+	-fx-background-color: transparent;
+	-fx-padding: 0;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+}
+
+.text-area:focused {
+	-fx-background-insets: 0;
+}
+
+.text-area:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.radio-button {
+	-fx-skin: "com.sun.javafx.scene.control.skin.RadioButtonSkin";
+	-fx-label-padding: 0.0em 0.0em 0.0em 0.416667em;
+	-fx-text-fill: -fx-text-color;
+}
+
+.radio-button:focused {
+	-fx-text-fill: -fx-text-color;
+}
+
+.radio-button .radio {
+	-fx-background-color: darkgrey, black, grey, white;
+   	-fx-background-insets: 0 0 -1 0,  0,  1,  2;
+   	-fx-background-radius: 1.0em;
+   	-fx-padding: 0.333333em;
+}
+
+.radio-button:focused .radio {
+	-fx-effect: dropshadow( two-pass-box , rgb(32, 186, 255) , 10, 0.0 , 0 , 0 );
+}
+
+.radio-button .dot {
+	-fx-background-color: transparent;
+   	-fx-background-insets: 0;
+   	-fx-background-radius: 1.0em;
+   	-fx-padding: 0.25em;
+}
+
+.radio-button:selected .dot {
+	-fx-background-color: black;
+   	-fx-background-insets: 0 0 0 0, 0;
+}
+
+.radio-button:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.check-box {
+	-fx-label-padding: 0.0em 0.0em 0.0em 0.416667em;
+	-fx-text-fill: -fx-text-color;
+}
+
+.check-box .box {
+	-fx-background-color:  -fx-grey-gradient;
+	-fx-background-insets: 0 0 -1 0, 0, 1, 2;
+	-fx-background-radius: 2, 2, 1, 1;
+	-fx-padding: 0.25em;
+}
+
+.check-box:focused .box {
+	-fx-background-color: -fx-grey-gradient;
+	-fx-effect: dropshadow( two-pass-box , rgb(32, 186, 255) , 10, 0.0 , 0 , 0 );
+}
+
+.check-box:hover .box {
+	-fx-background-color: -fx-grey-gradient;
+	-fx-effect: dropshadow( two-pass-box , rgb(32, 186, 255) , 10, 0.0 , 0 , 0 );
+}
+
+.check-box .mark {
+	-fx-background-color: transparent;
+	/*-fx-background-radius: 5;*/
+	-fx-padding: 0.333333em;
+	/*-fx-shape: "M0 4 H2 L3 6 L6 0 H8 L4 8 H2";*/
+	-fx-shape: "M0 5 C0 6 10 6 10 5 M1 0 L1 3 M9 0 L9 3";
+}
+
+.check-box:selected .mark {
+	-fx-border-color: black;
+}
+
+.menuBarSeparator {
+	-fx-background-color: rgb(32, 32, 32);
+}
+
+.context-menu {
+	-fx-background-color: radial-gradient(center 0% 0%, radius 200%, rgb(255, 255, 255), rgb(206, 206, 206));
+	-fx-background-radius: 0;
+	-fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em;
+}
+
+.menu-bar {
+	-fx-border-width: 0;
+	-fx-background-color: -fx-black-gradient;
+}
+
+.menu-bar > .container > .menu-button {
+	-fx-background-radius: 0;
+    	-fx-background-color: transparent;
+    	-fx-background-insets: 0;
+}
+
+.menu-bar > .container > .menu-button:hover {
+	-fx-background-color: -fx-grey-gradient;
+}
+
+.menu-bar > .container > .menu-button:showing {
+	-fx-background-color: -fx-grey-gradient;
+}
+
+.menu-bar > .container > .menu-button:disabled {
+	-fx-opacity: dis-opacity;
+}
+
+.menu-bar > .container > .menu-button > .label {
+	-fx-font-size: 12px;
+	-fx-font-family: "Arial";
+	-fx-text-fill: -fx-text-color;
+}
+
+.menu-bar > .container > .menu-button:hover > .label {
+	-fx-text-fill: black;
+}
+
+.menu-bar > .container > .menu-button:showing > .label {
+	-fx-text-fill: black;
+}
+
+.menu-item {
+	/*-fx-skin: "com.sun.javafx.scene.control.skin.MenuItemSkin";*/
+	-fx-padding: 0.333333em 0.41777em 0.333333em 0.41777em;
+	-fx-background-color: transparent;
+}
+
+.menu-item > .left-container {
+    -fx-padding: 0.458em 0.791em 0.458em 0.458em;
+}
+
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+
+.menu-item > .right-container {
+    -fx-padding: 0em 0em 0em 0.5em;
+}
+
+.menu-item:hover {
+	-fx-background-color: -fx-blue-gradient;
+}
+
+.menu-item:pressed {
+	-fx-background-color: -fx-blue-gradient;
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.55) , 2, 0.0 , -2 , 2 );
+}
+
+.menu-item:disabled {
+	-fx-background-color: transparent;
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.menu-item > .label {
+	-fx-padding: 0em 0.5em 0em 0em;
+	-fx-font-size: 12px;
+	-fx-font-family: "Arial";
+	-fx-text-fill: rgb(56, 56, 56);
+}
+
+.menu-item:hover > .label {
+	-fx-text-fill: white;
+}
+
+.menu-item:disabled > .label {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.accordion {
+	-fx-border-color: transparent;
+	-fx-border-width: 0;
+	-fx-background-color: transparent;
+}
+
+.titled-pane {
+	-fx-font-size: 14px;
+	-fx-alignment: center;
+	-fx-text-fill: rgb(47, 47, 47);
+	-fx-background-color: transparent;
+	-fx-border-width: 0;
+}
+
+.titled-pane:hover {
+	-fx-text-fill: white;
+}
+
+.titled-pane:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.titled-pane > *.content {
+	-fx-background-color: rgba(0, 0, 0, .12);
+	-fx-background-insets: 1 1 1 1;
+	-fx-border-width: 1;
+}
+
+.titled-pane > .title {
+	-fx-border-style: solid;
+	-fx-border-width: 0 0 1 0;
+	-fx-border-color: black;
+	-fx-background-color: -fx-grey-gradient;
+}
+
+.titled-pane:hover > .title {
+	-fx-background-color: -fx-blue-gradient;
+}
+
+.titled-pane > .title > .arrow-button {
+	-fx-background-color: transparent;
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+    	-fx-padding: 0.0em 0.25em 0.0em 0.0em;
+}
+
+.titled-pane > .title > .arrow-button > .arrow {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(56%, 56%, 56%), rgb(22%, 22%, 22%)), -fx-blue-gradient;
+    	-fx-background-insets: 1 0 -1 0, 0;
+    	-fx-padding: 0.35em 0.35em 0.35em 0.35em;
+    	-fx-shape: "M0 0 h7 l-3.5 4 z";
+}
+
+.titled-pane:hover > .title > .arrow-button > .arrow {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(56%, 56%, 56%), rgb(22%, 22%, 22%)), -fx-grey-gradient;
+}
+
+.titled-pane:collapsed > .title > .arrow-button > .arrow {
+	-fx-shape: "M0 0 h7 l-3.5 4 z";
+	-fx-background-color: linear-gradient(from 100% 0% to 0% 0%, rgb(56%, 56%, 56%), rgb(22%, 22%, 22%)), linear-gradient(from 100% 0% to 0% 0%, rgb(32, 186, 255), rgb(32, 186, 255) 41%, rgb(14, 86, 124) 49%, rgb(14, 86, 124) 75%, rgb(21, 126, 181));
+}
+
+.titled-pane:collapsed:hover > .title > .arrow-button > .arrow {
+	-fx-shape: "M0 0 h7 l-3.5 4 z";
+	-fx-background-color: linear-gradient(from 100% 0% to 0% 0%, rgb(56%, 56%, 56%), rgb(22%, 22%, 22%)), linear-gradient(from 100% 0% to 0% 0%, rgb(97%, 97%, 97%), rgb(97%, 97%, 97%) 41%, rgb(77%, 77%, 77%) 49%, rgb(77%, 77%, 77%) 75%, rgb(97%, 97%, 97%));
+}
+
+.titled-pane:disabled > .title {
+	-fx-background-color: -fx-grey-gradient;
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.accordionAnchorPanes {
+	-fx-background-color: transparent;
+	-fx-font-size: 12px;
+	-fx-padding: 0;
+}
+
+.accordionAnchorPanes:disabled{
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.list-view, .tree-view {
+	-fx-background-color: transparent;
+}
+
+.list-view:disabled, .tree-view:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.list-cell, .tree-cell {
+	/*-fx-skin: "com.sun.javafx.scene.control.skin.ListCellSkin";*/
+	-fx-background-color: rgba(247, 247, 247, .1);
+	-fx-padding: 0.25em;
+	-fx-text-fill: -fx-text-color;
+	-fx-opacity: 1;
+}
+
+.list-cell:selected, .tree-cell:selected {
+	-fx-background-color: -fx-grey-gradient;
+	-fx-text-fill: black;
+}
+
+.list-cell:odd, .tree-cell:odd {
+	-fx-background-color: rgba(247, 247, 247, .12);
+}
+
+.list-cell:selected:odd, .tree-cell:selected:odd {
+	-fx-background-color: -fx-grey-gradient;
+	-fx-text-fill: black;
+}
+
+.list-view-files {
+	-fx-background-color: transparent;
+}
+
+.list-view-files:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.list-view-files .list-cell, .list-view-files .tree-cell {
+	/*-fx-skin: "com.sun.javafx.scene.control.skin.ListCellSkin";*/
+	-fx-background-color: rgba(247, 247, 247, .1);
+	-fx-padding: 0.25em;
+	-fx-text-fill: -fx-text-color;
+	-fx-opacity: 1;
+}
+
+.list-view-files .list-cell:selected, .list-view-files .tree-cell:selected {
+	-fx-background-color: rgba(247, 247, 247, .1);
+}
+
+.list-view-files .list-cell:odd, .list-view-files .tree-cell:odd {
+	-fx-background-color: rgba(247, 247, 247, .12);
+}
+
+.list-view-files .list-cell:selected:odd, .list-view-files .tree-cell:selected:odd {
+	-fx-background-color: rgba(247, 247, 247, .12);
+}
+
+.tree-cell .tree-disclosure-node {
+	-fx-padding: 4 8 4 8;
+	-fx-background-color: transparent;
+}
+
+.tree-cell .tree-disclosure-node:disabled {
+	-fx-opacity: -fx-disabled-opacity;
+}
+
+.tree-cell .tree-disclosure-node .arrow {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgb(56%, 56%, 56%), rgb(22%, 22%, 22%)), -fx-grey-gradient;
+    	-fx-background-insets: 1 0 -1 0, 0;
+    	-fx-padding: 0.35em 0.35em 0.35em 0.35em;
+	-fx-shape: "M0 0 v7 l4 -3.5 z";
+}
+
+.tree-cell:expanded .tree-disclosure-node .arrow {
+	-fx-rotate: 0;
+	-fx-shape: "M0 0 h7 l-3.5 4 z";
+}
+
+.animBox {
+	-fx-background-color: rgb(0, 0, 0);
+	-fx-border-width: 0;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,.96) , 10, 0.0 , 0 , 1 );
+}
+
+.progress-indicator {
+    -fx-indeterminate-segment-count: 12;
+    -fx-spin-enabled: true;
+}
+
+.progress-indicator > .determinate-indicator > .indicator {
+    -fx-background-color: -fx-box-border,
+        radial-gradient(center 50% 50%, radius 50%, -fx-control-inner-background 70%, derive(-fx-control-inner-background, -9%) 100%), 
+        -fx-control-inner-background;
+    -fx-background-insets: 0, 1, 5 2 1 2;
+    -fx-padding: 0.166667em; /* 2px */
+}
+.progress-indicator > .determinate-indicator > .progress {
+    -fx-background-color: -fx-accent;
+    -fx-padding: 0.083333em; /* 1px */
+}
+.progress-indicator > .determinate-indicator > .tick {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0.666667em; /* 8 */
+    -fx-shape: "M-0.25,6.083c0.843-0.758,4.583,4.833,5.75,4.833S14.5-1.5,15.917-0.917c1.292,0.532-8.75,17.083-10.5,17.083C3,16.167-1.083,6.833-0.25,6.083z";
+}
+.progress-indicator > .percentage {
+    -fx-font-size: 0.916667em; /* 11pt - 1 less than the default font */
+    -fx-fill: -fx-text-background-color;
+}
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+}
+.progress-bar > .bar {
+	-fx-background-color: -fx-blue-gradient;
+	-fx-background-insets: 2 2 2 2;
+	-fx-background-radius: 0;
+	-fx-border-width: 0;
+	-fx-border-radius: 0;
+	-fx-border-style: solid;
+	-fx-border-color: white;
+	-fx-padding: 0.75em;
+}
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: linear-gradient(to bottom, rgb(255, 255, 255), rgb(198, 198, 198));
+}
+.progress-bar > .track {
+	-fx-background-color: linear-gradient(to bottom, rgb(255, 255, 255), rgb(198, 198, 198));
+	-fx-background-insets: 1 1 1 1;
+	-fx-background-radius: 0;
+	-fx-border-size: 1;
+	-fx-border-radius: 0;
+	-fx-border-style: solid;
+	-fx-border-color: rgb(198, 198, 198);
+}

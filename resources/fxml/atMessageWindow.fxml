@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="192.0" prefWidth="438.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atChat.MessageWindow">
+  <children>
+    <VBox id="VBox" alignment="CENTER" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="32.0">
+      <children>
+        <ScrollPane fx:id="scrollPane" fitToHeight="false" fitToWidth="true" hbarPolicy="NEVER" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+          <content>
+            <HBox id="HBox" fx:id="hBox" alignment="CENTER" fillHeight="true" spacing="5.0">
+              <children>
+                <Label fx:id="msgText" alignment="CENTER" text="" wrapText="true" HBox.hgrow="ALWAYS" />
+              </children>
+            </HBox>
+          </content>
+        </ScrollPane>
+        <Button mnemonicParsing="false" onAction="#dismissClick" text="Dismiss" VBox.vgrow="NEVER" />
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@atChatTheme.css" />
+  </stylesheets>
+</AnchorPane>

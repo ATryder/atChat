@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" styleClass="theme" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <VBox prefHeight="200.0" prefWidth="100.0" spacing="12.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+          <children>
+            <VBox prefHeight="336.0" prefWidth="318.0" spacing="10.0" HBox.hgrow="ALWAYS">
+              <children>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="3.0" VBox.vgrow="ALWAYS">
+                  <children>
+                    <Label text="Remote" />
+                    <GridPane styleClass="greyOutline" VBox.vgrow="ALWAYS">
+                      <children>
+                        <Label text="Chat Port" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                          <font>
+                            <Font size="14.0" fx:id="x1" />
+                          </font>
+                        </Label>
+                        <Label font="$x1" text="File Port" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <Label font="$x1" text="IP Address" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="141.0" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="185.0" minWidth="10.0" prefWidth="166.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </VBox>
+                <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="103.0" prefWidth="285.0" spacing="3.0" VBox.vgrow="ALWAYS">
+                  <children>
+                    <Label text="Local" />
+                    <GridPane styleClass="greyOutline" VBox.vgrow="ALWAYS">
+                      <children>
+                        <Label font="$x1" text="Chat Port" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <Label font="$x1" text="File Port" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="0" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER" />
+                      </children>
+                      <columnConstraints>
+                        <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="141.0" minWidth="10.0" prefWidth="101.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="185.0" minWidth="10.0" prefWidth="165.0" />
+                      </columnConstraints>
+                      <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                      </padding>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                      </rowConstraints>
+                    </GridPane>
+                  </children>
+                </VBox>
+              </children>
+            </VBox>
+            <VBox id="VBox" alignment="TOP_LEFT" prefHeight="336.0" prefWidth="334.0" spacing="3.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Label text="Shared Folders" VBox.vgrow="NEVER">
+                  <font>
+                    <Font size="12.0" />
+                  </font>
+                </Label>
+                <HBox prefHeight="336.0" prefWidth="394.0" spacing="5.0" styleClass="greyOutline">
+                  <children>
+                    <VBox alignment="TOP_RIGHT" maxWidth="-1.0" minWidth="-1.0" prefHeight="211.0" prefWidth="79.0" spacing="5.0" HBox.hgrow="NEVER">
+                      <children>
+                        <Button font="$x1" mnemonicParsing="false" text="Remove" />
+                        <Button font="$x1" mnemonicParsing="false" text="Add" />
+                      </children>
+                    </VBox>
+                    <ListView prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  </children>
+                  <padding>
+                    <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                  </padding>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER_RIGHT" minHeight="-1.0" prefHeight="32.0" prefWidth="200.0" spacing="12.0" VBox.vgrow="NEVER">
+          <children>
+            <Button mnemonicParsing="false" text="Save" HBox.hgrow="NEVER">
+              <font>
+                <Font size="18.0" fx:id="x2" />
+              </font>
+            </Button>
+            <Button font="$x2" mnemonicParsing="false" text="Cancel" HBox.hgrow="NEVER" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@atChatTheme.css" />
+  </stylesheets>
+</AnchorPane>
